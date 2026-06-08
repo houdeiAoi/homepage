@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 放課後デイ葵</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="site-name">放課後デイ葵</div>
+
+  </header>
+
+  <!-- ナビゲーション -->
+      <nav>
+    <ul>
+      <li><a href="aoi_top.html">葵トップ</a></li>
+      <li><a href="services.html">活動内容</a></li>
+      <li><a href="program.html">支援プログラム</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html" class="active">お問い合わせ</a></li>
+      <li><a href="index.html" style="opacity:0.7;">← 法人サイトへ</a></li>
+    </ul>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>ご質問・ご相談はお電話またはフォームよりお気軽にご連絡ください。</p>
+
+      <h3>お電話でのお問い合わせ</h3>
+      <p style="font-size:1.3rem; color:#2e7d9f; font-weight:bold; margin: 8px 0;">
+        045-273-8713（電話・FAX）<br>080-6437-3811（携帯）
+      </p>
+      <p style="color:#666; font-size:0.9rem;">受付時間：月〜金 9:00〜18:00 / 土 9:00〜12:00</p>
+    </section>
+
+    <section>
+      <h2>メールフォーム</h2>
+      <p style="margin-bottom:8px; color:#666; font-size:0.9rem;">
+        ※ご返信には数日いただく場合がございます。お急ぎの場合はお電話ください。
+      </p>
+
+      <form action="#" method="post" onsubmit="handleSubmit(event)">
+
+        <label for="name">お名前 <span style="color:red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+
+        <label for="phone">電話番号</label>
+        <input type="tel" id="phone" name="phone" placeholder="例：000-000-0000">
+
+        <label for="email">メールアドレス <span style="color:red;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
+
+        <label for="category">お問い合わせ種別</label>
+        <select id="category" name="category">
+          <option value="">選択してください</option>
+          <option value="service">サービスについて</option>
+          <option value="visit">見学・体験について</option>
+          <option value="other">その他</option>
+        </select>
+
+        <label for="message">お問い合わせ内容 <span style="color:red;">*</span></label>
+        <textarea id="message" name="message" placeholder="ご質問・ご相談内容をご記入ください。" required></textarea>
+
+        <button type="submit">送信する</button>
+      </form>
+
+      <div id="thanks-message" style="display:none; margin-top:24px; padding:20px; background:#e8f4f9; border-radius:8px; color:#2e7d9f;">
+        <strong>お問い合わせありがとうございます。</strong><br>
+        内容を確認のうえ、ご連絡いたします。
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2026 放課後デイ葵 All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.querySelector('form').style.display = 'none';
+      document.getElementById('thanks-message').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
+
+
+
